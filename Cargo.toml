@@ -1,0 +1,25 @@
+[package]
+name = "rsomics-seacr"
+version = "0.1.0"
+description = "CUT&RUN peak caller (bedGraph → BED peaks) — clean-room Rust port of SEACR"
+edition = "2024"
+rust-version = "1.91"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/omics-rust/rsomics-seacr"
+authors = ["Zane Leong <efd@live.com>"]
+
+[[bin]]
+name = "rsomics-seacr"
+path = "src/main.rs"
+
+[lib]
+name = "rsomics_seacr"
+path = "src/lib.rs"
+
+[dependencies]
+rsomics-common = { version = "0.6" }
+rsomics-help = { version = "0.3" }
+clap = { version = "4", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3"
