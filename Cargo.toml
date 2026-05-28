@@ -23,4 +23,10 @@ rsomics-help = { version = "0.3" }
 clap = { version = "4", features = ["derive"] }
 
 [dev-dependencies]
+criterion = { version = "0.7", default-features = false, features = ["cargo_bench_support"] }
 tempfile = "3"
+
+[[bench]]
+name = "bench"
+harness = false
+
